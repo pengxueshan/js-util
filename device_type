@@ -1,0 +1,15 @@
+function IsPC()  
+    {  
+       var userAgentInfo = navigator.userAgent;  
+       var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPod");  
+       var flag = true;  
+       for (var v = 0; v < Agents.length; v++) {  
+           if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }  
+       }  
+       return flag;  
+    }
+
+    var jumpPc = IsPC();
+    if(jumpPc!=false){
+        document.write('<style>.container,.cardbox,.coverbox{width:320px;height:568px;}.cardbox,.coverbox{margin-left: -160px;left: 50%;}</style>');
+    }
